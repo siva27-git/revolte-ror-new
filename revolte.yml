@@ -4,14 +4,14 @@ revolte:
   appName: Ruby
   config:
     codeReview:
-      summarize: true
-      suggestFixes: true
+      summarize: false
+      suggestFixes: false
       commentStyle: Balanced
     testSuite:
       command: npm run test
   workflow:
     developerWorkflow:
-      enabled: true
+      enabled: false
   env:
     staging:
       branch: staging
@@ -23,7 +23,7 @@ revolte:
           name: web_service
           entryPoint: index.js
           properties:
-            health: /health
+            health: /hello/world
             port: 8080
             loadBalancerMode: dedicated
             variables:
@@ -42,7 +42,7 @@ revolte:
           name: web_service
           entryPoint: index.js
           properties:
-            health: /health
+            health: /hello/world
             port: 8080
             loadBalancerMode: dedicated
             variables:
@@ -61,7 +61,7 @@ revolte:
           name: web_service
           entryPoint: index.js
           properties:
-            health: /health
+            health: /hello/world
             port: 8080
             loadBalancerMode: dedicated
             variables:
