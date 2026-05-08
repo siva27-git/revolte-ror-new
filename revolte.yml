@@ -1,7 +1,10 @@
 revolte:
   version: '1.0'
   project: Deployment Testing
-  appName: Ruby
+  appName: Ruby Test
+  workflow:
+    developerWorkflow:
+      enabled: true
   env:
     staging:
       branch: staging
