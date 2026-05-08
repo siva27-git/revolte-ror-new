@@ -7,16 +7,13 @@ revolte:
       summarize: false
       suggestFixes: false
       commentStyle: Balanced
-    testSuite:
-      command: npm run test
   workflow:
     developerWorkflow:
-      enabled: false
+      enabled: true
   env:
     staging:
       branch: staging
       codeReview: true
-      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -35,7 +32,6 @@ revolte:
     qa:
       branch: develop
       codeReview: true
-      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -54,7 +50,6 @@ revolte:
     production:
       branch: main
       codeReview: true
-      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -84,7 +79,6 @@ revolte:
                   stabilizationWindow: 300
     preview:
       codeReview: true
-      testSuite: true
       services:
         rid_1:
           type: WEB_SERVICE
