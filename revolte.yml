@@ -1,19 +1,10 @@
 revolte:
   version: '1.0'
   project: Deployment Testing
-  appName: Ruby
-  config:
-    codeReview:
-      summarize: false
-      suggestFixes: false
-      commentStyle: Balanced
-  workflow:
-    developerWorkflow:
-      enabled: true
+  appName: Ruby Test
   env:
     staging:
       branch: staging
-      codeReview: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -31,7 +22,6 @@ revolte:
             storage: 30
     qa:
       branch: develop
-      codeReview: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -49,7 +39,6 @@ revolte:
             storage: 30
     production:
       branch: main
-      codeReview: true
       services:
         rid_1:
           type: WEB_SERVICE
@@ -78,7 +67,6 @@ revolte:
                 scaleDown:
                   stabilizationWindow: 300
     preview:
-      codeReview: true
       services:
         rid_1:
           type: WEB_SERVICE
